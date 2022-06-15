@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  display: grid;
+  place-content: center;
+  align-content: center;
+}
+
+#logo {
+  width: 70%;
+  height: 300px;
+}
+#logo path:nth-child(1) {
+  stroke-dasharray: 980.4169311523438;
+  stroke-dashoffset: 980.4169311523438;
+  animation: line-animate 5s ease forwards;
+  animation-iteration-count: infinite;
+}
+#logo path:nth-child(2) {
+  stroke-dasharray: 663.4781494140625;
+  stroke-dashoffset: 663.4781494140625;
+  animation: line-animate2 5s ease forwards 0.25s;
+  animation-iteration-count: infinite;
+}
+#logo path:nth-child(3) {
+  stroke-dasharray: 654.8050537109375;
+  stroke-dashoffset: 654.8050537109375;
+  animation: line-animate3 5s ease forwards 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes line-animate {
+  10% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  20% {
+    /* stroke-dashoffset: 0; */
+    fill: green;
+  }
+  40% {
+    fill: green;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: green;
+  }
+
+  90% {
+    stroke-dashoffset: 980.4169311523438;
+    fill: transparent;
+  }
+}
+
+@keyframes line-animate2 {
+  10% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  30% {
+    stroke-dashoffset: 0;
+    fill: green;
+  }
+
+  80% {
+    stroke-dashoffset: 663.4781494140625;
+    fill: transparent;
+  }
+}
+@keyframes line-animate3 {
+  10% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  30% {
+    stroke-dashoffset: 0;
+    fill: red;
+  }
+
+  80% {
+    stroke-dashoffset: 654.8050537109375;
+    fill: transparent;
+  }
+}
